@@ -15,7 +15,8 @@ def convert_status_to_pi_content_item(s):
         'contenttype': 'text/plain',
         'language': s.lang,
         'content': s.text,
-        'reply': (s.in_reply_to_status_id == None),
+        'created': s.created_at_in_seconds,
+        'reply': (s.in_reply_to_status_id is None),
         'forward': False
     }
 
@@ -92,4 +93,4 @@ r = requests.post(pi_url + '/v2/profile',
                   )
 
 print("Profile Request sent. Status code: %d, content-type: %s" % (r.status_code, r.headers['content-type']))
-print json.loads(r.text)
+print(json.loads(r.text))
