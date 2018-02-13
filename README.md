@@ -1,5 +1,7 @@
 # IBM Watson Personality Insights Twitter Python Sample
 
+[![Build Status](https://travis-ci.org/watson-developer-cloud/personality-insights-twitter-python.svg?branch=master)](https://travis-ci.org/watson-developer-cloud/personality-insights-twitter-python)
+
 This sample shows how to get Twitter data using the [Twitter REST API](https://dev.twitter.com/rest/public) 
 (via the [python-tweepy client library](https://github.com/tweepy/tweepy)) and submit it to the 
 [Personality Insights Service](https://www.ibm.com/watson/services/personality-insights/).
