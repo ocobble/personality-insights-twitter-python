@@ -1,3 +1,6 @@
+#!/usr/bin/env python
+
+from __future__ import print_function
 import sys
 import requests
 import json
@@ -53,14 +56,14 @@ for x in range(0, 16):  # Pulls max number of tweets from an account
                                                        count=200,
                                                        include_rts=False)
         status_count = len(statuses_portion)
-        max_id = statuses_portion[status_count - 1].id - 1  # get id of last tweet and bump below for next tweet set
+        # get id of last tweet and bump below for next tweet set
+        max_id = statuses_portion[status_count - 1].id - 1
     else:
         statuses_portion = twitter_api.user_timeline(screen_name=handle,
                                                        count=200,
                                                        max_id=max_id,
                                                        include_rts=False)
         status_count = len(statuses_portion)
-        print status_count
         try:
             max_id = statuses_portion[status_count - 1].id - 1  # get id of last tweet and bump below for next tweet set
         except:
@@ -92,5 +95,6 @@ r = requests.post(pi_url + '/v2/profile',
                   data=json.dumps(pi_content_items)
                   )
 
-print("Profile Request sent. Status code: %d, content-type: %s" % (r.status_code, r.headers['content-type']))
+print("Profile Request sent. Status code: %d, content-type: %s" %
+      (r.status_code, r.headers['content-type']))
 print(json.loads(r.text))
