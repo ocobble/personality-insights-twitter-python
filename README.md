@@ -2,9 +2,9 @@
 
 This sample shows how to get Twitter data using the [Twitter REST API](https://dev.twitter.com/rest/public) 
 (via the [python-tweepy client library](https://github.com/tweepy/tweepy)) and submit it to the 
-[Personality Insights Service](https://www.ibm.com/smarterplanet/us/en/ibmwatson/developercloud/personality-insights.html).
+[Personality Insights Service](https://www.ibm.com/watson/services/personality-insights/).
 
-For non-twitter samples and more details on how to setup your Personality Insights service in bluemix see the [official 
+For non-twitter samples and more details on how to setup your Personality Insights service in IBM Cloud see the [official 
 Watson Developer Cloud samples](https://github.com/watson-developer-cloud).
 
 ## Setup
