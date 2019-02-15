@@ -35,10 +35,10 @@ handle = sys.argv[1]
 # NOTE: API key and API secret go in the twitter_consumer_key and twitter_consumer_secret vars.
 #
 
-access_key = ""
-access_secret = ""
-consumer_key = ""
-consumer_secret = ""
+access_key = "824067883764424705-5gFymvk9NuaVdY2Xd8mA2OwE0jswfUv"
+access_secret = "ofgkdoLGXxWDLOCBzz56UTIJqSV97BAJidqfGG6vPrjh2"
+consumer_key = "NNvzowYlWDEFNvFoAZDUVtqOD"
+consumer_secret = "GXArM7jFy8j8DsX6D5n50l3OFmGbidyopKnhDrv0wjrEMk9EB7"
 
 auth = tweepy.OAuthHandler(consumer_key, consumer_secret)
 auth.set_access_token(access_key, access_secret)
@@ -81,9 +81,9 @@ pi_content_items = {'contentItems': pi_content_items_array}
 # and clicking the "show credentials" link on the service in the application dashboard.
 # Or you can use "cf env <application name>" from the command line to get the credentials.
 
-pi_url = ''
-pi_username = ''
-pi_password = ''
+pi_url = 'https://gateway-wdc.watsonplatform.net/personality-insights/api'
+pi_username = 'twitter-personality--personalityinsi-155018868014'
+pi_password = 'kYqlGLHmDoxt2NsBlq8fMZnKa-pYoeY4px6rgQGvawGd'
 
 r = requests.post(pi_url + '/v2/profile',
                   auth=(pi_username, pi_password),
